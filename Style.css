@@ -17,10 +17,16 @@ body{
     flex-direction:column;
 }
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+    transition:.4s;
+    z-index:1000;
 }
 nav a{
     color: #4A3428;
@@ -109,3 +115,15 @@ section h2{
 .features h3{
     margin-bottom: 15px;
 }
+.about{
+    background:#EFE6DD;
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+}
+
