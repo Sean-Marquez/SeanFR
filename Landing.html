@@ -8,20 +8,22 @@
     </head>
     <body>
         <div class = "hero">
-
             <header>
-                <div class="Logo">
+                <div class ="logo">
                     Dear Candle PH
                 </div>
                 <nav>
-                    <a href="Home.html">Home</a>
-                    <a href="About Us.html">About</a>
+
+                    <a href ="Home.html">Home</a>
                     <a href="Products.html">Products</a>
-                    <a href="LogIn.html">Login</a>
+                    <a href="About Us.html">About</a>
                     <a href="Register.html">Register</a>
+                    <a href="LogIn.html">Login</a>
+                    
                 </nav>
             </header>
 
+ 
             <div class="content">
                 <h1>Dear Candle PH</h1>
                 <p>
@@ -59,67 +61,39 @@
                 </div>
             </div>
         </section>
-        
-        <section class = "why">
-            <h2>Why Choose Dear Candle PH</h2>
 
-            <div class = "features">
-                <div class = "features">
-                    <h3>Handcrafted Quality</h3>
-                    <p>Our candles are made with the finest ingredients and attention to detail.</p>
-                </div>
+        <div>
 
-                <div class = "features">
-                    <h3>Handcrafted Quality</h3>
-                    <p>Our candles are made with the finest ingredients and attention to detail.</p>
-                </div>
+         <section class="about">
+            <h2>About Dear Candle PH</h2>
+            <p>
+                Dear Candle PH is a small business that specializes in handcrafted scented candles. 
+                Our candles are made with love and care, using high-quality ingredients to create
+                a unique and delightful experience for our customers. We believe that a candle can 
+                transform any space into a cozy and inviting atmosphere, and we strive to bring that 
+                warmth and comfort to every home.
+            </p>
+         </section>
 
-                <div class = "features">
-                    <h3>Handcrafted Quality</h3>
-                    <p>Our candles are made with the finest ingredients and attention to detail.</p>
-                </div>
-            </div>
-          
-        </section>
-        <section class="collections">
-
-          <h2>Our Collections</h2>
-
-           <div class="products">
-
-            <div class="card">
-                <h3>Floral Collection</h3>
-            </div>
-
-            <div class="card">
-                <h3>Coffee Collection</h3>
-            </div>
-
-            <div class="card">
-                <h3>Luxury Collection</h3>
-            </div>
-
-         </div>
-
-        </section>
-        <section class="about">
-
-          <h2>About Dear Candle PH</h2>
-
-         <p>
-            Dear Candle PH creates handcrafted scented candles that bring warmth,
-            peace, and elegance into every home. Every candle is carefully made
-            to create relaxing moments and unforgettable memories.
-         </p>
-
-        </section>
-
+        </div>  
 
         <div class="footer">
             <p>
                 &copy; 2022 Dear Candle PH. All rights reserved.
             </p>
         </div>
+     <script>   
+        window.addEventListener("scroll", function(){
 
+        const header = document.querySelector("header");
+
+        if(window.scrollY > 60){
+        header.classList.add("scrolled");
+        }else{
+        header.classList.remove("scrolled");
+        }
+        });
+
+     </script>
     </body>
 </html>
