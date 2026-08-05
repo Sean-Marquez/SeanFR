@@ -92,3 +92,20 @@ section h2{
     color:#8B5E3C;
     font-weight: bold;
 }
+.features{  
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.features{
+    width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+.features h3{
+    margin-bottom: 15px;
+}
