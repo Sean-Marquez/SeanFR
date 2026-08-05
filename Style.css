@@ -52,3 +52,43 @@ button{
     text-align: center;
     padding: 20px;
 }
+section{
+    padding: 80px 10%;
+}
+section h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+    color:#4A3428;
+}
+.products{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35;
+}
+.card{
+    width: 280px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+.car.hover{
+    transform: translateY(-10px);
+}
+.card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.card h3{
+    margin: 20px 0 10px;
+}
+.card p{
+    margin-bottom: 20px;
+    color:#8B5E3C;
+    font-weight: bold;
+}
