@@ -5,22 +5,6 @@
    -Shop button
    -abt brand
    -logo
----------------------------------------------------------
-| Logo                                      🔍 👤 🛒   |
-|                                                       |
-| HOME                                                  |
-| SHOP                                                  |
-| ABOUT                                                 |
-| CONTACT                                               |
-|                                                       |
-|                 Dear Candle PH                        |
-|         Handcrafted Scented Candles                   |
-|                                                       |
-|             [ Shop Now ]                              |
-|                                                       |
-|        Mon-Sun 8AM-8PM                                |
-|        Puerto Princesa, Palawan                       |
----------------------------------------------------------
 
 >>Home Page
    -New scented candles
