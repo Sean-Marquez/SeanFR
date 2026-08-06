@@ -1,17 +1,40 @@
-body{
-    margin: 0;
-    font-family: Reliev, Poppins, serif, sans-serif, ;
-}
 @font-face{
     font-family:"Playfair";
-    src:url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+    src:url("fonts/PlayfairDisplay-Regular.ttf") format("truetype");
     font-weight:400;
+    font-style:normal;
+}
+
+@font-face{
+    font-family:"Playfair";
+    src:url("fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+    font-weight:700;
+    font-style:normal;
 }
 
 @font-face{
     font-family:"Poppins";
-    src:url("../fonts/Poppins-Regular.woff2") format("woff2");
+    src:url("fonts/Poppins-Regular.ttf") format("truetype");
     font-weight:400;
+    font-style:normal;
+}
+
+@font-face{
+    font-family:"Poppins";
+    src:url("fonts/Poppins-Medium.ttf") format("truetype");
+    font-weight:500;
+    font-style:normal;
+}
+
+@font-face{
+    font-family:"Poppins";
+    src:url("fonts/Poppins-SemiBold.ttf") format("truetype");
+    font-weight:600;
+    font-style:normal;
+}
+body{
+    margin:0;
+    font-family:"Poppins", sans-serif;
 }
 .hero{
     height:100vh;
@@ -159,7 +182,7 @@ header.scrolled nav a{
     color:#E9CFAE;
 }
 .logo{
-    font-family:"Playfair Display", serif;
+    font-family:"Playfair", serif;
     font-size:34px;
     font-weight:700;
     color:#FFFDFB;
@@ -266,9 +289,8 @@ nav a:hover{
 }
 h1,
 h2,
-h3,
-.logo{
-    font-family:"Playfair Display", serif;
+h3{
+    font-family:"Playfair", serif;
 }
 body{
     font-family: "Poppins", sans-serif;
@@ -423,15 +445,75 @@ body{
     margin-bottom:20px;
     font-weight: 700;
 }
-.about h2{
-    margin-left: 50px;
+.about{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:80px;
+    align-items:center;
+    background:#F8F4EF;
+    padding:140px 8%;
 }
-.about p{
-    max-width: 800px;
-    margin: 10px auto;
-    font-size: 18px;
-    line-height: 1.6;
+.about-container{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+.about-label{
+    color:#B98B62;
+    font-size:13px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:18px;
+}
+.about h2{
+    font-family:"Playfair Display", serif;
+    font-size:50px;
     color:#4A3428;
+    margin-bottom:45px;
+    line-height:1.1;
+}.about blockquote{
+    font-family:"Playfair Display", serif;
+    font-size:25px;
+    font-style:italic;
+    color:#5C4638;
+    line-height:1.7;
+    margin:0 auto;
+    max-width:760px;
+    position:relative;
+}
+.about blockquote::before{
+    content:"“";
+    position:absolute;
+    left:-30px;
+    top:-25px;
+    font-size:50px;
+    color:rgba(185,139,98,.18);
+    font-family:"Playfair Display", serif;
+}
+.about blockquote::after{
+    content:"”";
+    position:absolute;
+    right:-25px;
+    bottom:-55px;
+    font-size:50px;
+    color:rgba(185,139,98,.18);
+    font-family:"Playfair Display", serif;
+}
+.signature{
+    margin-top:60px;
+    color:#A67C52;
+    font-size:15px;
+    letter-spacing:2px;
+    font-weight:400;
+}
+.about-container::before{
+    content:"";
+    display:block;
+    width:70px;
+    height:2px;
+    background:#C8A27A;
+    margin:0 auto 35px;
 }
 .footer{
     font-family: Arial;
