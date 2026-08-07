@@ -3,7 +3,6 @@
 >>Landing Page
    -home
    -Shop button
-   -abt brand
    -logo
 
 >>Home Page
