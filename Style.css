@@ -34,7 +34,7 @@
 }
 body{
     margin:0;
-    font-family:"Poppins", sans-serif;
+    font-family:"Poppins", "Playfair", sans-serif;
 }
 .hero{
     height:100vh;
@@ -95,29 +95,21 @@ body{
     margin-top:20px;
 }
 .primary-btn{
-
     display:inline-flex;
     align-items:center;
     justify-content:center;
-
     padding:18px 40px;
-
     background:#A67C52;
     color:#fff;
-
     text-decoration:none;
-
     border-radius:999px;
-
     font-size:18px;
     font-weight:600;
     letter-spacing:.5px;
-
     transition:
         transform .35s ease,
         background .35s ease,
         box-shadow .35s ease;
-
     box-shadow:
         0 12px 30px rgba(0,0,0,.20);
 
@@ -140,7 +132,7 @@ body{
     transition:.6s;
 }
 .primary-btn:hover{
-    background:#8F6744;
+    background:#fbd4b1;
     transform:translateY(-5px);
     box-shadow:
     0 18px 45px rgba(0,0,0,.28);
@@ -189,7 +181,7 @@ header.scrolled nav a{
     transition:.35s;
 }
 .logo:hover{
-    color:#F1DFC8;
+    color:#fff0ab;
     letter-spacing:1px;
 }
 nav{
@@ -197,13 +189,13 @@ nav{
     color:white;
     text-decoration:none;   
     font-weight:500;
+    display:flex;
+    gap:40px;
+    margin-right:70px;
     transition:
     color .35s ease,
     transform .35s ease,
     text-shadow .35s ease;
-    display:flex;
-    gap:40px;
-    margin-right:70px;
 }
 nav a{
     font-family:"Poppins", sans-serif;
@@ -236,10 +228,8 @@ nav a.active::before{
     display:none;
 }
 nav a:hover{
-   color:#F7E8D3; /* warm candle beige */
+    color:#F7E8D3; 
     transform:translateY(-2px);
-
-    /* Candle glow */
     text-shadow:
         0 0 4px rgba(255,245,225,.8),
         0 0 8px rgba(255,230,185,.7),
