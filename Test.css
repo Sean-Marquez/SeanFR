@@ -197,13 +197,10 @@ header.scrolled nav a{
     color:rgba(255,255,255,.75);
 }
 .logo h2{
-    font-family:"Playfair", serif;
-    font-size:24px;
-    font-weight:400;
-    letter-spacing:3px;
+    font-family:"Playfair Display",serif;
+    font-size:34px;
+    font-weight:700;
     line-height:1;
-    margin:0;
-    text-transform:uppercase;
 }
 nav{
     display:flex;
