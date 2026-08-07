@@ -1,7 +1,7 @@
 >>Title: Dear Candle Ph
 
 >>Landing Page
-   -Featured candles
+   -home
    -Shop button
    -abt brand
    -logo
@@ -25,7 +25,6 @@
            -Shipping address
            -Payment method
            -Place order
-
 
 >>Login Page
    -email

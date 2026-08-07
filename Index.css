@@ -23,10 +23,10 @@ body{
     inset:0;
     background:
     linear-gradient(
-        to right,
-        rgba(16,12,10,.72),
-        rgba(16,12,10,.45),
-        rgba(16,12,10,.18)
+        90deg,
+        rgba(10,8,8,.78) 0%,
+        rgba(18,12,10,.48) 45%,
+        rgba(18,12,10,.18) 100%
     );
     z-index:1;
 }
@@ -35,25 +35,35 @@ header{
     top:0;
     left:0;
     width: 100%;
-    padding:35px 70px;
+    padding:40px 75px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     z-index:100;
 }
 .logo{
-    color:white;
-    font-family:"Playfair Display",serif;
-    font-size:36px;
-    font-weight:700;
-    letter-spacing:.5px;
-    cursor:pointer;
-    transition:.4s;
+    display:flex;
+    flex-direction:column;
+    color:#fff;
 }
 .logo:hover{
     color:#F7E7CE;
     text-shadow:
     0 0 20px rgba(255,215,140,.45);
+}
+.logo span{
+    margin-top:8px;
+    margin-left:46px;
+    font-size:11px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.75);
+}
+.logo h2{
+    font-family:"Playfair Display",serif;
+    font-size:34px;
+    font-weight:700;
+    line-height:1;
 }
 nav{
     display:flex;
@@ -75,7 +85,7 @@ nav a::after{
     width:0;
     height:2px;
     background:#D8B07A;
-    transform:translateX(-50%);
+    transform:translateY(-50%);
     transition:.35s;
 }
 nav a:hover{
@@ -90,8 +100,67 @@ nav a:hover::after{
 .landing-content{
     position:absolute;
     left:10%;
-    top:50%;
+    top:52%;
     transform:translateY(-50%);
-    max-width:620px;
+    width:650px;
     z-index:5;
+}
+.landing-content h1{
+    font-family:"Playfair Display",serif;
+    font-size:96px;
+    line-height:.88;
+    font-weight:700;
+    color:#fff;
+    margin:18px 0 25px;
+    text-shadow:0 10px 35px rgba(0,0,0,.45);
+}
+.landing-btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:150px;
+    height:50px;
+    font-size:15px;
+    border-radius:40px;
+    background:#C89B6A;
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    transition:.35s;
+}
+.landing-btn:hover{
+    transform:translateY(-4px);
+    background:#B78653;
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
+}
+.bottom-info{
+    position:absolute;
+    bottom:32px;
+    left:70px;
+    right:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items: flex-end;
+    z-index:20;
+}
+.bottom-info h4{
+    font-family:"Poppins",sans-serif;
+    font-size:11px;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:rgba(255,255,255,.9);
+}
+.bottom-info div{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+.bottom-info p{
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.75);
 }
