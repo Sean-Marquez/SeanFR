@@ -193,9 +193,11 @@ header.scrolled nav a{
     transition:.35s;
 }
 .logo:hover{
-    color:#fff0ab;
-    letter-spacing:1px;
+    color:#F7E7CE;
+    text-shadow:
+    0 0 20px rgba(255,215,140,.45);
 }
+
 nav{
     position:relative;
     color:white;

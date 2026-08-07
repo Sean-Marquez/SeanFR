@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:"Poppins",sans-serif;
+    overflow:hidden;
+    background:#000;
+}
+.landing{
+    position:relative;
+    width:100%;
+    height:100vh;
+    background-image:url("BGLAND.PNG");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    overflow:hidden;
+}
+.overlay{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        to right,
+        rgba(16,12,10,.72),
+        rgba(16,12,10,.45),
+        rgba(16,12,10,.18)
+    );
+    z-index:1;
+}
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    padding:35px 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+.logo{
+    color:white;
+    font-family:"Playfair Display",serif;
+    font-size:36px;
+    font-weight:700;
+    letter-spacing:.5px;
+    cursor:pointer;
+    transition:.4s;
+}
+.logo:hover{
+    color:#F7E7CE;
+    text-shadow:
+    0 0 20px rgba(255,215,140,.45);
+}
+nav{
+    display:flex;
+    gap:42px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    letter-spacing:1px;
+    position:relative;
+    transition:.4s ease;
+}
+nav a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:#D8B07A;
+    transform:translateX(-50%);
+    transition:.35s;
+}
+nav a:hover{
+    color:#FFF4E4;
+    text-shadow:
+    0 0 10px rgba(255,214,120,.8),
+    0 0 22px rgba(255,214,120,.45);
+}
+nav a:hover::after{
+    width:100%;
+}
+.landing-content{
+    position:absolute;
+    left:10%;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:620px;
+    z-index:5;
+}
