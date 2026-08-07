@@ -55,6 +55,18 @@ body{
         rgba(35,23,17,.15)
     );
 }
+.hero::after{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    right:-220px;
+    top:-180px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(214,181,136,.14),
+    transparent 70%);
+}
 .float{
     font-size:15px;
     letter-spacing:5px;
