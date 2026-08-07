@@ -1,3 +1,37 @@
+@font-face{
+    font-family:"Playfair";
+    src:url("fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+    font-weight:400;
+    font-style:normal;
+}
+
+@font-face{
+    font-family:"Playfair";
+    src:url("fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+    font-weight:700;
+    font-style:normal;
+}
+
+@font-face{
+    font-family:"Poppins";
+    src:url("fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight:400;
+    font-style:normal;
+}
+
+@font-face{
+    font-family:"Poppins";
+    src:url("fonts/Poppins-Medium.ttf") format("truetype");
+    font-weight:500;
+    font-style:normal;
+}
+
+@font-face{
+    font-family:"Poppins";
+    src:url("fonts/Poppins-SemiBold.ttf") format("truetype");
+    font-weight:600;
+    font-style:normal;
+}
 *{
     margin: 0;
     padding: 0;
@@ -8,15 +42,16 @@ body{
     overflow:hidden;
     background:#000;
 }
-.landing{
-    position:relative;
-    width:100%;
-    height:100vh;
-    background-image:url("BGLAND.PNG");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    overflow:hidden;
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    padding:40px 75px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
 }
 .overlay{
     position:absolute;
@@ -30,16 +65,15 @@ body{
     );
     z-index:1;
 }
-header{
-    position:absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    padding:40px 75px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:100;
+.landing{
+    position:relative;
+    width:100%;
+    height:100vh;
+    background-image:url("BGLAND.PNG");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    overflow:hidden;
 }
 .logo{
     display:flex;
@@ -68,14 +102,22 @@ header{
 nav{
     display:flex;
     gap:42px;
+    position:relative;
+    color:white;
+    text-decoration:none;   
+    transition:
+    color .35s ease,
+    transform .35s ease,
+    text-shadow .35s ease;
 }
 nav a{
-    color:white;
-    text-decoration:none;
-    font-size:16px;
-    letter-spacing:1px;
+    font-family:"Poppins", sans-serif;
     position:relative;
-    transition:.4s ease;
+    text-decoration:none;
+    color:#FFFDFB;
+    font-size:16px;
+    transition:all .35s ease;
+    letter-spacing: 1px;
 }
 nav a::after{
     content:"";
@@ -84,18 +126,21 @@ nav a::after{
     bottom:-8px;
     width:0;
     height:2px;
-    background:#D8B07A;
-    transform:translateY(-50%);
+    background:linear-gradient(to right,#D8B07A,#F6E7C9,#D8B07A);
+    transform:translateX(-50%);
     transition:.35s;
+    box-shadow:
+    0 0 6px rgba(255,220,170,.7),
+    0 0 12px rgba(255,220,170,.35);
 }
 nav a:hover{
-    color:#FFF4E4;
-    text-shadow:
-    0 0 10px rgba(255,214,120,.8),
-    0 0 22px rgba(255,214,120,.45);
+    width:100%;
 }
 nav a:hover::after{
     width:100%;
+}
+nav a.active::before{
+    display:none;
 }
 .landing-content{
     position:absolute;
@@ -116,24 +161,49 @@ nav a:hover::after{
 }
 .landing-btn{
     display:inline-flex;
-    justify-content:center;
     align-items:center;
-    width:150px;
-    height:50px;
-    font-size:15px;
-    border-radius:40px;
-    background:#C89B6A;
-    color:white;
+    justify-content:center;
+    padding:18px 40px;
+    background:#A67C52;
+    color:#fff;
     text-decoration:none;
-    font-size:16px;
+    border-radius:999px;
+    font-size:18px;
     font-weight:600;
-    transition:.35s;
+    letter-spacing:.5px;
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.20);
+
+    position:relative;
+    overflow:hidden;
+}
+.landing-btn::before{
+    content:"";
+    position:absolute;
+    left:-120%;
+    top:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transition:.6s;
 }
 .landing-btn:hover{
     transform:translateY(-4px);
     background:#B78653;
     box-shadow:
     0 15px 35px rgba(0,0,0,.35);
+}
+.landing-btn:hover::before{
+    left:120%;
 }
 .bottom-info{
     position:absolute;
