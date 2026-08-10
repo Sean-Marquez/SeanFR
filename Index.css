@@ -39,7 +39,6 @@
 }
 body{
     font-family:"Poppins",sans-serif;
-    overflow:hidden;
     background:#000;
 }
 header{
@@ -167,12 +166,12 @@ nav a.active::before{
     font-family:"Playfair",serif;
     color:#F8F3ED;
     font-size:78px;
-    font-weight:400;
+    font-weight:500;
     line-height:1;
-    letter-spacing:1px;
+    letter-spacing:2px;
     margin:0;
     text-shadow:
-        0 15px 30px rgba(0,0,0,.35);
+        5 20px 30px rgba(0,0,0,.35);
 }
 .title-line{
     width:45px;
