@@ -3,25 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN - Dear Candle PH</title>
-    <link rel="Stylesheet" href="Products.css">
+    <title>Login - Dear Candle PH</title>
+    <link rel="stylesheet" href="Login,Register.Css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Login</h1>
 
-    <form>
-        <label>Email:</label><br>
-        <input type="email"><br><br>
+    <header>
+        <div class="logo">
+            <h2>🕯 Dear Candle PH</h2>
+            <span>PHILIPPINE HANDCRAFTED CANDLES</span>
+        </div>
 
-        <label>Password:</label><br>
-        <input type="password"><br><br>
+        <nav>
+            <a href="Landing.html">Hero</a>
+            <a href="Home.html">Home</a>
+            <a href="Products.html">Products</a>
+            <a href="About Us.html">About</a>
+            <a href="Register.html">Register</a>
+        </nav>
+    </header>
 
-        <input type ="submit" value="Login">
+    <main class="auth-section">
+        <div class="auth-card">
+            <p class="section-label">WELCOME BACK</p>
+            <h1>Login</h1>
+            <p class="auth-description">Welcome back to Dear Candle PH.</p>
 
-    </form>
-    
+            <form>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="auth-switch">Don't have an account? <a href="Register.html">Register here</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Dear Candle PH | Handcrafted with care in the Philippines.</p>
+    </footer>
+
 </body>
 </html>
+```
