@@ -3,32 +3,23 @@
 >>Landing Page
    -home
    -Shop button
+   -story
+   -best seller
+   -why us
    -logo
 
 >>Home Page
    -New scented candles
-   -Best sellers
-   -Product categories
-    +Product page
-     -Prduct img
-     -names
-     -descrip
-     -add to cart
-     -buy now
-       +shpping cart
-         -sellected product
-         -quantity
-         -total price
-           +Checkout Page
-           -Customer Info
-           -Shipping address
-           -Payment method
-           -Place order
+   -philo
+   -view products
+   -experience
+
+>>Products
 
 >>Login Page
    -email
    -password
-   -forgot ps
+   -login
 
 >>Registration
    -name
@@ -36,8 +27,8 @@
    -passwrod
    -confirm ps
 
->> Contact us
-   -Contact form
-   -store loc
-   -soc med links
-   
+>>About us
+  -when did it start\
+  -why us
+  -etc.
+  
