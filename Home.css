@@ -17,15 +17,17 @@ h3 {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    padding: 40px 75px;
     width: 100%;
+    padding: 20px 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
+    background: #F5EEE8;
+    border-bottom: 1px solid #E5D6C8;
 }
 
 .overlay {
@@ -72,51 +74,51 @@ header {
     z-index: 2;
     pointer-events: none;
 }
+
 .logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    color: #F5EDE4;
+    color: #4A3428;
     cursor: pointer;
-}
-
-.logo span {
-    margin-top: 8px;
-    margin-left: 46px;
-    font-size: 11px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,.75);
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease,
+        text-shadow 0.4s ease;
 }
 
 .logo h2 {
+    font-family: "Playfair Display", serif;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 3px;
     line-height: 1;
     text-transform: uppercase;
 }
 
+
 .logo:hover {
-    color: #F8E8D2;
+    color: #A67C52;
     transform: translateY(-1px);
-    text-shadow: 0 0 20px rgba(255,215,140,.45);
+    text-shadow: 0 0 20px rgba(255, 215, 140, 0.25);
 }
+
 
 nav {
     display: flex;
     gap: 42px;
+    position: relative;
 }
 
 nav a {
     position: relative;
     text-decoration: none;
-    color: #FFFDFB;
+    color: #4A3428;
     font-size: 16px;
     letter-spacing: 1px;
     transition:
-        color .35s ease,
-        text-shadow .35s ease;
+        color 0.35s ease,
+        text-shadow 0.35s ease;
 }
 
 nav a::after {
@@ -133,15 +135,15 @@ nav a::after {
         #D8B07A
     );
     transform: translateX(-50%);
-    transition: .35s;
+    transition: width 0.35s ease;
     box-shadow:
-        0 0 6px rgba(255,220,170,.7),
-        0 0 12px rgba(255,220,170,.35);
+        0 0 6px rgba(255, 220, 170, 0.7),
+        0 0 12px rgba(255, 220, 170, 0.35);
 }
 
 nav a:hover {
-    color: #F8E8D2;
-    text-shadow: 0 0 10px rgba(255,220,170,.3);
+    color: #A67C52;
+    text-shadow: 0 0 10px rgba(166, 124, 82, 0.2);
 }
 
 nav a:hover::after {
