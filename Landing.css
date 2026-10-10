@@ -27,7 +27,7 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .overlay {
@@ -50,16 +50,39 @@ img {
     z-index: 1;
 }
 
+
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 75px;
+    padding: 20px 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
+    background: #F5EEE8;
+    border-bottom: 1px solid #E5D6C8;
+}
+
+header .logo h2 {
+    color: #4A3428;
+}
+
+header .logo span {
+    color: #765238;
+}
+
+header nav a {
+    color: #4A3428;
+}
+
+header nav a:hover {
+    color: #A67C52;
+}
+
+header nav a::after {
+    background: #A67C52;
 }
 
 .logo {
