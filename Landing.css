@@ -129,13 +129,14 @@ nav a {
         text-shadow .35s ease;
 }
 
+
 nav a::after {
     content: "";
     position: absolute;
     left: 50%;
     bottom: -8px;
     width: 0;
-    height: 2px;
+    height: 3px;
     background: linear-gradient(
         to right,
         #D8B07A,
@@ -143,19 +144,10 @@ nav a::after {
         #D8B07A
     );
     transform: translateX(-50%);
-    transition: width .35s ease;
+    transition: width 0.35s ease;
     box-shadow:
-        0 0 6px rgba(255,220,170,.7),
-        0 0 12px rgba(255,220,170,.35);
-}
-
-nav a:hover {
-    color: #F8E8D2;
-    text-shadow: 0 0 10px rgba(255,220,170,.3);
-}
-
-nav a:hover::after {
-    width: 100%;
+        0 0 6px rgba(255, 220, 170, 0.7),
+        0 0 12px rgba(255, 220, 170, 0.35);
 }
 
 .landing-content {
@@ -539,10 +531,6 @@ nav a:hover::after {
         transform .35s ease;
 }
 
-.feature:hover {
-    background: #F5EEE8;
-    transform: translateY(-5px);
-}
 
 .feature-icon {
     margin: 0 auto 22px;

@@ -103,7 +103,6 @@ header {
     text-shadow: 0 0 20px rgba(255, 215, 140, 0.25);
 }
 
-
 nav {
     display: flex;
     align-items: center;
@@ -120,27 +119,11 @@ nav a {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
-    transition: color 0.35s ease, text-shadow 0.35s ease;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 0;
-    height: 2px;
-    background: #D8B07A;
-    transition: width 0.3s ease;
+    transition: color 0.35s ease;
 }
 
 nav a:hover {
     color: #A67C52;
-    text-shadow: none;
-}
-
-nav a:hover::after {
-    width: 100%;
 }
 
 .landing-content {
@@ -280,11 +263,6 @@ nav a:hover::after {
     transition:
         background .35s ease,
         transform .35s ease;
-}
-
-.value-box:hover {
-    background: #FAF6F1;
-    transform: translateY(-6px);
 }
 
 .value-number {
