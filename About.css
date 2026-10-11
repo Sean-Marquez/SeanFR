@@ -23,7 +23,7 @@ img {
     position: relative;
     height: 100vh;
     min-height: 700px;
-    background-image: url("BGLAND.jpg");
+    background-image: url("ABOUTBG.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -150,23 +150,304 @@ nav a::after {
         0 0 12px rgba(255, 220, 170, 0.35);
 }
 
+.landing-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-35%);
+    max-width: 650px;
+    color: #F5EDE4;
+    z-index: 2;
+}
 
+.brand-label,
+.section-label {
+    color: #A67C52;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
 
+.landing-content .brand-label {
+    color: #D8B07A;
+}
 
+.landing-content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
 
+.title-line {
+    width: 75px;
+    height: 3px;
+    background: #D8B07A;
+    margin-bottom: 25px;
+}
 
+.hero-subtitle {
+    max-width: 560px;
+    color: #F5EDE4;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
 
+.landing-btn {
+    display: inline-block;
+    padding: 13px 27px;
+    background: #D8B07A;
+    color: #30231D;
+    border: 1px solid #D8B07A;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: background .3s ease, color .3s ease;
+}
 
+.landing-btn:hover {
+    background: transparent;
+    color: #F5EDE4;
+}
 
+.intro-section {
+    padding: 100px 10%;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 80px;
+    background: #F5EEE8;
+}
 
+.intro-text h2,
+.story-text h2,
+.section-heading h2,
+.why-heading h2 {
+    font-family: "Playfair Display", serif;
+    color: #4A3428;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
 
+.intro-text p:not(.section-label),
+.story-text p:not(.section-label),
+.section-heading > p:not(.section-label) {
+    color: #765F50;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 2;
+    margin-bottom: 18px;
+}
 
+.text-btn {
+    display: inline-block;
+    margin-top: 12px;
+    color: #765238;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-bottom: 1px solid #A67C52;
+    padding-bottom: 5px;
+}
 
+.text-btn:hover {
+    color: #A67C52;
+}
 
+.intro-quote {
+    background: #E9DCCE;
+    padding: 55px 40px;
+    text-align: center;
+    border: 1px solid #DDC8B5;
+}
 
+.intro-quote span {
+    display: block;
+    font-family: "Playfair Display", serif;
+    color: #A67C52;
+    font-size: 75px;
+    line-height: 1;
+}
 
+.intro-quote h3 {
+    font-family: "Playfair Display", serif;
+    color: #4A3428;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 15px 0 25px;
+}
 
+.intro-quote p {
+    color: #8A6A4E;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
 
+.story-section {
+    padding: 100px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+    background: #EFE2D5;
+}
+
+.story-image {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-text h2 {
+    margin-bottom: 25px;
+}
+
+.values-section {
+    padding: 100px 8%;
+    background: #F5EEE8;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 15px;
+}
+
+.section-heading > p:not(.section-label) {
+    margin-bottom: 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.value-card {
+    padding: 40px 30px;
+    background: #EFE2D5;
+    border: 1px solid #E2D0BE;
+}
+
+.value-card span {
+    display: block;
+    color: #A67C52;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-family: "Playfair Display", serif;
+    color: #4A3428;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    color: #765F50;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.9;
+}
+
+.why-us {
+    padding: 100px 8%;
+    background: #E9DCCE;
+}
+
+.why-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.why-heading h2 {
+    margin-bottom: 0;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    padding: 35px 22px;
+    text-align: center;
+    background: #F5EEE8;
+    border: 1px solid #E1D0BE;
+}
+
+.feature-icon {
+    color: #A67C52;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-family: "Playfair Display", serif;
+    color: #4A3428;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    color: #765F50;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 1.9;
+}
+
+.logo {
+    cursor: default;
+    transition: none;
+}
+
+.logo:hover {
+    color: inherit;
+    transform: none;
+    text-shadow: none;
+}
+
+.footer-links a:hover {
+    color: #F5EDE4;
+    transform: none;
+}
+
+.footer-social a:hover {
+    color: #EFE5DC;
+}
+
+nav a:hover {
+    color: #A67C52;
+}
 
 footer {
     background: #30231D;
