@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #F5EEE8;
+    color: #4A3428;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.landing {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    background-image: url("BGLAND.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: clip;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25,18,14,.55),
+            rgba(25,18,14,.25),
+            rgba(25,18,14,.12)
+        ),
+        radial-gradient(
+            ellipse 55% 65% at 50% 52%,
+            rgba(20,14,11,.45) 0%,
+            rgba(20,14,11,.25) 40%,
+            rgba(20,14,11,.08) 70%,
+            transparent 100%
+        );
+    z-index: 1;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: #F5EEE8;
+    border-bottom: 1px solid #E5D6C8;
+}
+
+header .logo h2 {
+    color: #4A3428;
+}
+
+header .logo span {
+    color: #765238;
+}
+
+header nav a {
+    color: #4A3428;
+}
+
+header nav a:hover {
+    color: #A67C52;
+}
+
+header nav a::after {
+    background: #A67C52;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #F5EDE4;
+    cursor: pointer;
+    transition:
+        color .4s ease,
+        transform .4s ease,
+        text-shadow .4s ease;
+}
+
+.logo:hover {
+    color: #F8E8D2;
+    transform: translateY(-1px);
+    text-shadow: 0 0 20px rgba(255,215,140,.45);
+}
+
+.logo h2 {
+    font-family: "Playfair", serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 42px;
+    position: relative;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #FFFDFB;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition:
+        color .35s ease,
+        text-shadow .35s ease;
+}
+
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(
+        to right,
+        #D8B07A,
+        #F6E7C9,
+        #D8B07A
+    );
+    transform: translateX(-50%);
+    transition: width 0.35s ease;
+    box-shadow:
+        0 0 6px rgba(255, 220, 170, 0.7),
+        0 0 12px rgba(255, 220, 170, 0.35);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
