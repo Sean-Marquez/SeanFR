@@ -200,20 +200,22 @@ nav a::after {
 
 .landing-btn {
     display: inline-block;
-    padding: 13px 27px;
-    background: #D8B07A;
-    color: #30231D;
+    padding: 15px 32px;
     border: 1px solid #D8B07A;
-    text-decoration: none;
+    background: #A67C52;
+    color: #FFF8F0;
+    font-family: "Poppins", sans-serif;
     font-size: 11px;
     font-weight: 500;
-    letter-spacing: 1px;
-    transition: background .3s ease, color .3s ease;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .landing-btn:hover {
-    background: transparent;
-    color: #F5EDE4;
+    background: #F5EEE8;
+    color: #4A3428;
 }
 
 .intro-section {
