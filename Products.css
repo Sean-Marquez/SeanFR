@@ -150,6 +150,79 @@ nav a::after {
         0 0 12px rgba(255, 220, 170, 0.35);
 }
 
+.landing-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    width: 90%;
+    max-width: 950px;
+    text-align: center;
+    color: #F5EEE8;
+    z-index: 2;
+}
+
+.brand-label {
+    margin-bottom: 22px;
+    color: #E2C39B;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    line-height: 1.8;
+}
+
+.landing-content h1 {
+    margin-bottom: 25px;
+    color: #FFF8F0;
+    font-family: "Playfair Display", serif;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.25);
+}
+
+.title-line {
+    width: 75px;
+    height: 2px;
+    margin: 0 auto 25px;
+    background: #D8B07A;
+}
+
+
+.hero-subtitle {
+    max-width: 620px;
+    margin: 0 auto 35px;
+    color: #F5EEE8;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.landing-btn {
+    display: inline-block;
+    padding: 15px 32px;
+    border: 1px solid #D8B07A;
+    background: #A67C52;
+    color: #FFF8F0;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.landing-btn:hover {
+    background: #F5EEE8;
+    color: #4A3428;
+}
+
 footer {
     background: #30231D;
     color: #F5EDE4;
