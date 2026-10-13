@@ -435,14 +435,6 @@ nav a::after {
     font-family: "Playfair Display", serif;
 }
 
-
-
-
-
-
-
-
-
 footer {
     background: #30231D;
     color: #F5EDE4;
@@ -1002,5 +994,42 @@ footer {
 
     .cart-controls {
         gap: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .landing-content {
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 0 24px;
+        box-sizing: border-box;
+        transform: none;
+    }
+
+    .landing-content h1 {
+        font-size: clamp(36px, 9vw, 48px);
+        line-height: 1.15;
+        overflow-wrap: break-word;
+    }
+
+    .brand-label {
+        font-size: 9px;
+        letter-spacing: 2px;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-subtitle {
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .landing-btn {
+        display: inline-block;
+        max-width: 100%;
+        padding: 13px 18px;
+        box-sizing: border-box;
+        text-align: center;
     }
 }
