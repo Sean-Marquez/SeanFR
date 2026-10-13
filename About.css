@@ -582,3 +582,485 @@ footer {
 .footer-social a:hover {
     color: #D7A56D;
 }                                                                           
+
+
+@media (max-width: 1200px) {
+    header {
+        padding: 20px 5%;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 24px;
+    }
+
+    .landing-content {
+        left: 7%;
+        width: 86%;
+        max-width: 650px;
+    }
+
+    .landing-content h1 {
+        font-size: 52px;
+    }
+
+    .intro-section,
+    .story-section {
+        padding: 80px 7%;
+        gap: 45px;
+    }
+
+    .values-section,
+    .why-us {
+        padding: 80px 6%;
+    }
+
+    .values-grid {
+        gap: 20px;
+    }
+
+    .value-card {
+        padding: 30px 24px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .footer-content {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 18px 4%;
+        gap: 18px;
+    }
+
+    .logo h2 {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+
+    .landing {
+        height: 720px;
+        min-height: 0;
+        background-position: center;
+    }
+
+    .landing-content {
+        left: 6%;
+        width: 88%;
+        max-width: 600px;
+        transform: translateY(-25%);
+    }
+
+    .landing-content h1 {
+        font-size: 46px;
+        line-height: 1.2;
+    }
+
+    .brand-label,
+    .section-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+        line-height: 1.8;
+    }
+
+    .hero-subtitle {
+        max-width: 500px;
+        font-size: 13px;
+    }
+
+    .intro-section,
+    .story-section {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+        padding: 70px 7%;
+    }
+
+    .intro-text h2,
+    .story-text h2,
+    .section-heading h2,
+    .why-heading h2 {
+        font-size: 32px;
+    }
+
+    .intro-quote {
+        padding: 40px 30px;
+    }
+
+    .story-image {
+        height: 380px;
+    }
+
+    .values-section,
+    .why-us {
+        padding: 70px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .value-card {
+        padding: 28px 22px;
+        min-width: 0;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .feature {
+        padding: 30px 20px;
+        min-width: 0;
+    }
+
+    footer {
+        padding: 60px 6% 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 18px 12px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .logo {
+        align-items: center;
+    }
+
+    .logo h2 {
+        font-size: 17px;
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    nav a::after {
+        bottom: -5px;
+        height: 2px;
+    }
+
+    .landing {
+        height: 700px;
+        min-height: 0;
+        background-size: cover;
+        background-position: 58% center;
+    }
+
+    .landing-content {
+        top: 54%;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        padding: 0 22px;
+        transform: translateY(-20%);
+        text-align: center;
+    }
+
+    .landing-content .brand-label {
+        margin-bottom: 16px;
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .landing-content h1 {
+        margin-bottom: 20px;
+        font-size: clamp(34px, 9vw, 44px);
+        line-height: 1.2;
+        overflow-wrap: normal;
+    }
+
+    .title-line {
+        margin: 0 auto 22px;
+    }
+
+    .hero-subtitle {
+        max-width: 100%;
+        margin: 0 auto 25px;
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .landing-btn {
+        max-width: 100%;
+        padding: 13px 18px;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .intro-section,
+    .story-section {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding: 55px 22px;
+    }
+
+    .intro-text h2,
+    .story-text h2,
+    .section-heading h2,
+    .why-heading h2 {
+        font-size: clamp(28px, 7.5vw, 34px);
+        line-height: 1.3;
+        margin-bottom: 20px;
+        overflow-wrap: anywhere;
+    }
+
+    .intro-text p:not(.section-label),
+    .story-text p:not(.section-label),
+    .section-heading > p:not(.section-label) {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .text-btn {
+        font-size: 10px;
+        line-height: 1.8;
+    }
+
+    .intro-quote {
+        padding: 35px 22px;
+    }
+
+    .intro-quote span {
+        font-size: 60px;
+    }
+
+    .intro-quote h3 {
+        font-size: 23px;
+        line-height: 1.5;
+    }
+
+    .intro-quote p {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+        line-height: 1.8;
+    }
+
+    .story-image {
+        width: 100%;
+        height: 280px;
+    }
+
+    .values-section,
+    .why-us {
+        padding: 55px 22px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .values-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .value-card {
+        padding: 28px 24px;
+    }
+
+    .value-card span {
+        font-size: 27px;
+        margin-bottom: 14px;
+    }
+
+    .value-card h3 {
+        font-size: 21px;
+    }
+
+    .value-card p {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .why-heading {
+        margin-bottom: 30px;
+    }
+
+    .features {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .feature {
+        padding: 28px 22px;
+    }
+
+    .feature-icon {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .feature h3 {
+        font-size: 21px;
+    }
+
+    .feature p {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    footer {
+        padding: 48px 22px 25px;
+    }
+
+    .footer-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding-bottom: 35px;
+    }
+
+    .footer-brand h2 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .footer-brand p,
+    .footer-contact p {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .footer-links h4,
+    .footer-contact h4,
+    .footer-social h4 {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .footer-links a,
+    .footer-social a {
+        font-size: 12px;
+    }
+
+    .footer-contact p:last-child {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 360px) {
+    header {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .logo h2 {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    nav {
+        gap: 11px 13px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .landing {
+        height: 680px;
+        background-position: 60% center;
+    }
+
+    .landing-content {
+        top: 53%;
+        padding: 0 16px;
+        transform: translateY(-15%);
+    }
+
+    .landing-content h1 {
+        font-size: 33px;
+    }
+
+    .landing-content .brand-label {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+    }
+
+    .landing-btn {
+        padding: 12px 14px;
+        font-size: 9px;
+    }
+
+    .intro-section,
+    .story-section {
+        padding: 45px 17px;
+    }
+
+    .intro-text h2,
+    .story-text h2,
+    .section-heading h2,
+    .why-heading h2 {
+        font-size: 28px;
+    }
+
+    .intro-quote {
+        padding: 30px 18px;
+    }
+
+    .story-image {
+        height: 240px;
+    }
+
+    .values-section,
+    .why-us {
+        padding: 45px 17px;
+    }
+
+    .value-card,
+    .feature {
+        padding: 25px 18px;
+    }
+
+    footer {
+        padding: 42px 18px 22px;
+    }
+}
