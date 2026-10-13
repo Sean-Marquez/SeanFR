@@ -690,9 +690,404 @@ footer {
     color: #D7A56D;
 }                                                                           
 
+
 @media (max-width: 1200px) {
     header {
         padding: 20px 5%;
     }
 
-    
+    nav {
+        gap: 25px;
+    }
+
+    .landing-content {
+        width: 80%;
+        left: 8%;
+    }
+
+    .values,
+    .best-sellers,
+    .about {
+        padding: 100px 5%;
+    }
+
+    .seller-layout {
+        gap: 25px;
+    }
+
+    .product-grid {
+        gap: 15px;
+    }
+
+    .product-info {
+        padding: 20px;
+    }
+
+    .product-info h3 {
+        font-size: 23px;
+    }
+
+    .art-side {
+        min-width: 240px;
+    }
+
+    .quote {
+        padding: 40px 25px;
+    }
+
+    .quote h2 {
+        font-size: 55px;
+    }
+
+    .footer-content {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 18px 4%;
+    }
+
+    .logo h2 {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 13px;
+        letter-spacing: 0;
+    }
+
+    .landing {
+        min-height: 650px;
+        height: 100vh;
+        height: 100svh;
+    }
+
+    .landing-content {
+        left: 7%;
+        width: 86%;
+    }
+
+    .landing-content h1 {
+        font-size: 78px;
+    }
+
+    .intro h2,
+    .section-heading h2,
+    .about h2 {
+        font-size: 46px;
+    }
+
+    .value-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .value-box {
+        padding: 35px 20px;
+    }
+
+    .seller-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .product-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .product-card {
+        min-width: 0;
+    }
+
+    .art-side {
+        position: relative;
+        top: auto;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .quote {
+        min-height: 350px;
+    }
+
+    .about blockquote {
+        font-size: 21px;
+    }
+
+    .about blockquote::before {
+        left: -15px;
+    }
+
+    .about blockquote::after {
+        right: -15px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        position: absolute;
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .logo {
+        align-items: center;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .landing {
+        min-height: 620px;
+        background-position: 58% center;
+    }
+
+    .overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(20,14,11,.72),
+            rgba(20,14,11,.42)
+        );
+    }
+
+    .landing-content {
+        top: 55%;
+        left: 6%;
+        width: 88%;
+    }
+
+    .landing-content h1 {
+        font-size: clamp(54px, 14vw, 72px);
+        line-height: .95;
+        margin: 15px 0 20px;
+    }
+
+    .title-line {
+        margin: 20px 0;
+    }
+
+    .hero-subtitle {
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.8;
+        margin-bottom: 25px;
+    }
+
+    .landing-btn {
+        padding: 13px 23px;
+        font-size: 10px;
+    }
+
+    .values,
+    .best-sellers,
+    .about {
+        padding: 75px 6%;
+    }
+
+    .intro {
+        margin-bottom: 45px;
+    }
+
+    .section-label,
+    .about-label {
+        font-size: 9px;
+        letter-spacing: 3px;
+        line-height: 1.8;
+    }
+
+    .intro h2,
+    .section-heading h2,
+    .about h2 {
+        font-size: clamp(32px, 8vw, 42px);
+        line-height: 1.15;
+    }
+
+    .intro p:not(.section-label) {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .value-container {
+        grid-template-columns: 1fr;
+    }
+
+    .value-box {
+        min-height: auto;
+        padding: 35px 22px;
+    }
+
+    .value-box h3 {
+        font-size: 25px;
+    }
+
+    .value-box p {
+        font-size: 13px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading p {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .section-heading span {
+        display: block;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .product-card {
+        min-height: 0;
+    }
+
+    .product-image {
+        height: 260px;
+    }
+
+    .product-image img {
+        width: min(250px, 85%);
+        height: 240px;
+    }
+
+    .product-info {
+        padding: 22px;
+    }
+
+    .product-info h3 {
+        font-size: 25px;
+    }
+
+    .quote {
+        min-height: 340px;
+        padding: 40px 20px;
+    }
+
+    .quote h2 {
+        font-size: clamp(48px, 13vw, 60px);
+    }
+
+    .about h2 {
+        margin-bottom: 28px;
+    }
+
+    .about blockquote {
+        font-size: 17px;
+        line-height: 1.9;
+        padding: 0 8px;
+    }
+
+    .about blockquote::before {
+        left: -8px;
+        top: -25px;
+        font-size: 45px;
+    }
+
+    .about blockquote::after {
+        right: -8px;
+        bottom: -45px;
+        font-size: 45px;
+    }
+
+    .signature {
+        margin-top: 35px;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    footer {
+        padding: 55px 6% 25px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-bottom: 35px;
+    }
+
+    .footer-brand h2 {
+        font-size: 24px;
+    }
+
+    .footer-brand p,
+    .footer-contact p {
+        font-size: 12px;
+    }
+
+    .footer-links a,
+    .footer-social a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo h2 {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    nav {
+        gap: 10px 13px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .landing-content h1 {
+        font-size: 52px;
+    }
+
+    .landing-btn {
+        padding: 12px 18px;
+    }
+
+    .values,
+    .best-sellers,
+    .about {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .product-info {
+        padding: 18px;
+    }
+
+    .quote h2 {
+        font-size: 45px;
+    }
+}
+
+
