@@ -745,3 +745,16 @@ footer {
     color: #D7A56D;
 }
 
+@media (max-width: 900px) {
+    header {
+        padding: 20px 30px;
+    } 
+
+    nav {
+        gap: 18px;
+    }
+
+
+
+
+}
