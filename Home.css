@@ -689,3 +689,10 @@ footer {
 .footer-social a:hover {
     color: #D7A56D;
 }                                                                           
+
+@media (max-width: 1200px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    
