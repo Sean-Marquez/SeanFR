@@ -143,13 +143,6 @@ nav a:hover {
     text-shadow: 0 10px 35px rgba(0,0,0,.45);
 }
 
-.title-line {
-    width: 48px;
-    height: 1px;
-    background: #D8B07A;
-    margin: 25px 0;
-}
-
 .hero-subtitle {
     max-width: 440px;
     color: rgba(255,255,255,.72);
@@ -203,11 +196,11 @@ nav a:hover {
 }
 
 .intro h2 {
-    font-size: 58px;
+    font-size: 50px;
     color: #4A3428;
     margin-bottom: 25px;
     line-height: 1.1;
-    font-weight: 500;
+    font-weight: 450;
 }
 
 .intro p:not(.section-label) {
@@ -222,7 +215,7 @@ nav a:hover {
     z-index: 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
+    gap: 0px;
     max-width: 1200px;
     margin: auto;
     background: rgba(166,124,82,.18);
@@ -237,13 +230,6 @@ nav a:hover {
     transition:
         background .35s ease,
         transform .35s ease;
-}
-
-.value-number {
-    color: #B99672;
-    font-size: 13px;
-    letter-spacing: 2px;
-    margin-bottom: 22px;
 }
 
 .value-box h3 {
@@ -293,12 +279,6 @@ nav a:hover {
     color: #4A3428;
     margin-bottom: 15px;
     line-height: 1.1;
-}
-
-.section-heading span {
-    color: #7A675A;
-    font-size: 13px;
-    font-weight: 300;
 }
 
 .seller-layout {
@@ -367,15 +347,6 @@ nav a:hover {
     padding: 25px;
 }
 
-.product-category {
-    color: #A67C52;
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 9px;
-}
-
 .product-info h3 {
     color: #4A3428;
     font-size: 27px;
@@ -432,8 +403,6 @@ nav a:hover {
     width: 100%;
     min-height: 420px;
     padding: 50px 35px;
-    background: #E9DDD1;
-    border: 1px solid rgba(166,124,82,.18);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -441,6 +410,7 @@ nav a:hover {
     text-align: center;
     position: relative;
 }
+
 .quote > p {
     position: relative;
     z-index: 2;
@@ -459,16 +429,6 @@ nav a:hover {
     line-height: .95;
     margin-bottom: 25px;
     font-weight: 500;
-}
-
-.quote > span {
-    position: relative;
-    z-index: 2;
-    max-width: 240px;
-    color: #7A675A;
-    font-size: 11px;
-    font-weight: 300;
-    line-height: 1.8;
 }
 
 .quote > a {
@@ -515,14 +475,14 @@ nav a:hover {
 }
 
 .about h2 {
-    font-size: 58px;
+    font-size: 45px;
     color: #4A3428;
     margin-bottom: 35px;
     line-height: 1.1;
     font-weight: 500;
 }
 .about blockquote {
-    font-size: 24px;
+    font-size: 22px;
     font-style: italic;
     color: #5C4638;
     line-height: 1.8;
@@ -532,7 +492,6 @@ nav a:hover {
 }
 
 .about blockquote::before {
-    content: "“";
     position: absolute;
     left: -40px;
     top: -30px;
@@ -541,7 +500,6 @@ nav a:hover {
 }
 
 .about blockquote::after {
-    content: "”";
     position: absolute;
     right: -35px;
     bottom: -60px;
