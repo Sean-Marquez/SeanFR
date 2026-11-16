@@ -23,7 +23,7 @@ img {
     position: relative;
     height: 100vh;
     min-height: 700px;
-    background-image: url("ABOUTBG.jpg");
+    background-image: url("Images/ABOUTBG.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

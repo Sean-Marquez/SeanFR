@@ -23,7 +23,7 @@ img {
     position: relative;
     height: 100vh;
     min-height: 700px;
-    background-image: url("BGLAND.jpg");
+    background-image: url("Images/BGLAND.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -494,7 +494,7 @@ nav a::after {
             rgba(25,18,14,.55),
             rgba(25,18,14,.75)
         ),
-        url("BGLAND.jpg");
+        url("Images/BGLAND.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
