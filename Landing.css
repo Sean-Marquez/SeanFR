@@ -306,18 +306,11 @@ nav a::after {
     gap: 28px;
 }
 
-.product-card {
-    position: relative;
-    background: #F9F5F1;
-    border: 1px solid #E7DDD4;
-    transition:
-        transform .45s ease,
-        box-shadow .45s ease;
-}
+
 
 .product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(74, 52, 40, .12);
 }
 
 .product-image {
@@ -346,9 +339,6 @@ nav a::after {
     transition: transform .5s ease;
 }
 
-.product-card:hover .product-image img {
-    transform: translateY(-8px);
-}
 
 .product-info {
     padding: 27px 25px 32px;

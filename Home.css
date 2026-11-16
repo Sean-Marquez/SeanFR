@@ -292,19 +292,6 @@ nav a:hover {
     gap: 25px;
 }
 
-.product-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 450px;
-    background: #F9F5F1;
-    border: 1px solid #E7DDD4;
-    transition:
-        transform .45s cubic-bezier(.22,1,.36,1),
-        box-shadow .45s cubic-bezier(.22,1,.36,1);
-    overflow: hidden;
-}
 .product-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 22px 45px rgba(0,0,0,.12);
