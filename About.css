@@ -260,37 +260,6 @@ nav a::after {
     color: #A67C52;
 }
 
-.intro-quote {
-    background: #E9DCCE;
-    padding: 55px 40px;
-    text-align: center;
-    border: 1px solid #DDC8B5;
-}
-
-.intro-quote span {
-    display: block;
-    font-family: "Playfair Display", serif;
-    color: #A67C52;
-    font-size: 75px;
-    line-height: 1;
-}
-
-.intro-quote h3 {
-    font-family: "Playfair Display", serif;
-    color: #4A3428;
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 1.5;
-    margin: 15px 0 25px;
-}
-
-.intro-quote p {
-    color: #8A6A4E;
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 2px;
-}
-
 .story-section {
     padding: 100px 10%;
     display: grid;
@@ -345,8 +314,6 @@ nav a::after {
 
 .value-card {
     padding: 40px 30px;
-    background: #EFE2D5;
-    border: 1px solid #E2D0BE;
 }
 
 .value-card span {
@@ -397,14 +364,7 @@ nav a::after {
 .feature {
     padding: 35px 22px;
     text-align: center;
-    background: #F5EEE8;
-    border: 1px solid #E1D0BE;
-}
-
-.feature-icon {
-    color: #A67C52;
-    font-size: 30px;
-    margin-bottom: 20px;
+    border: 1px solid #db862bbd;
 }
 
 .feature h3 {
