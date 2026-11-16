@@ -203,13 +203,6 @@ nav a:hover {
     font-weight: 450;
 }
 
-.intro p:not(.section-label) {
-    font-size: 15px;
-    line-height: 1.9;
-    color: #6B584C;
-    font-weight: 300;
-}
-
 .value-container {
     position: relative;
     z-index: 2;
@@ -505,15 +498,6 @@ nav a:hover {
     bottom: -60px;
     font-size: 65px;
     color: rgba(185,139,98,.20);
-}
-
-.signature {
-    margin-top: 50px;
-    color: #A67C52;
-    font-size: 11px;
-    letter-spacing: 3px;
-    font-weight: 400;
-    text-transform: uppercase;
 }
 
 footer {

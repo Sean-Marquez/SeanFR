@@ -182,12 +182,7 @@ nav a::after {
     margin-bottom: 22px;
 }
 
-.title-line {
-    width: 75px;
-    height: 3px;
-    background: #D8B07A;
-    margin-bottom: 25px;
-}
+
 
 .hero-subtitle {
     max-width: 560px;

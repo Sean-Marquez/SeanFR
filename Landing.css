@@ -201,20 +201,11 @@ nav a::after {
     color: #4A3428;
 }
 
-.section-label {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 5px;
-    color: #000000;
-    text-transform: uppercase;
-}
-
 .intro-section {
     position: relative;
     padding: 135px 10%;
     background: #F8F4EF;
     display: grid;
-    grid-template-columns: 1.1fr .9fr;
     gap: 100px;
     align-items: center;
     overflow: hidden;
@@ -226,9 +217,6 @@ nav a::after {
     max-width: 650px;
 }
 
-.intro-text .section-label {
-    margin-bottom: 22px;
-}
 
 .intro-text h2 {
     font-family: "Playfair", serif;
@@ -239,14 +227,6 @@ nav a::after {
     margin-bottom: 30px;
 }
 
-.intro-text > p:not(.section-label) {
-    max-width: 600px;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 2;
-    color: #7A675A;
-    margin-bottom: 16px;
-}
 
 .text-btn {
     display: inline-block;
@@ -265,36 +245,6 @@ nav a::after {
 .text-btn:hover {
     color: #4A3428;
     border-color: #4A3428;
-}
-
-.intro-quote {
-    position: relative;
-    z-index: 2;
-    min-height: 390px;
-    padding: 70px 55px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.intro-quote h3 {
-    max-width: 400px;
-    font-family: "Playfair", serif;
-    font-size: 34px;
-    font-weight: 500;
-    line-height: 1.35;
-    color: #4A3428;
-}
-
-.intro-quote p {
-    margin-top: 25px;
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #8F6744;
 }
 
 .best-sellers {
