@@ -1,5 +1,5 @@
 <?php
-// Register.php - creates a new account
+
 session_start();
 require_once 'config.php';
 
