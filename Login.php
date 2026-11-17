@@ -1,9 +1,8 @@
 <?php
-// Login.php - checks email + password and starts a session
 session_start();
 require_once 'config.php';
 
-// Already logged in? Go straight to the welcome page.
+
 if (isset($_SESSION['user_id'])) {
     header('Location: Welcome.php');
     exit();
@@ -26,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($email === '' || $password === '') {
         $error = 'Please enter your email and password.';
     } else {
-        // Look up the user with a prepared statement (safe from SQL injection)
+
         $stmt = mysqli_prepare($db, 'SELECT id, name, password FROM users WHERE email = ?');
         mysqli_stmt_bind_param($stmt, 's', $email);
         mysqli_stmt_execute($stmt);
@@ -34,9 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $found = mysqli_stmt_fetch($stmt);
         mysqli_stmt_close($stmt);
 
-        // Compare the typed password with the stored hash
+
         if ($found && password_verify($password, $user_hash)) {
-            session_regenerate_id(true);           // new session ID after login (security)
+            session_regenerate_id(true);           
             $_SESSION['user_id']    = $user_id;
             $_SESSION['user_name']  = $user_name;
             $_SESSION['user_email'] = $email;
@@ -44,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: Welcome.php');
             exit();
         } else {
-            // Same message for wrong email or wrong password, so nobody can guess which emails exist
+             exist
             $error = 'Invalid email or password.';
         }
     }

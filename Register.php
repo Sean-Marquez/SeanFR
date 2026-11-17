@@ -3,7 +3,7 @@
 session_start();
 require_once 'config.php';
 
-// Already logged in? No need to register again.
+
 if (isset($_SESSION['user_id'])) {
     header('Location: Welcome.php');
     exit();
@@ -20,7 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
     $confirm  = $_POST['confirm-password'] ?? '';
 
-    // 2. Validate (server-side)
     if ($name === '') {
         $errors[] = 'Full name is required.';
     } elseif (strlen($name) > 100) {
@@ -39,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = 'Passwords do not match.';
     }
 
-    // 3. Make sure the email is not already registered
+
     if (empty($errors)) {
         $stmt = mysqli_prepare($db, 'SELECT id FROM users WHERE email = ?');
         mysqli_stmt_bind_param($stmt, 's', $email);
@@ -51,7 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_stmt_close($stmt);
     }
 
-    // 4. Save the new user (password is hashed, never stored as plain text)
     if (empty($errors)) {
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
