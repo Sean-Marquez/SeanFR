@@ -1,3 +1,78 @@
+<?php
+// Register.php - creates a new account
+session_start();
+require_once 'config.php';
+
+// Already logged in? No need to register again.
+if (isset($_SESSION['user_id'])) {
+    header('Location: Welcome.php');
+    exit();
+}
+
+$errors = [];
+$name   = '';
+$email  = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // 1. Collect the form data
+    $name     = trim($_POST['name'] ?? '');
+    $email    = strtolower(trim($_POST['email'] ?? ''));
+    $password = $_POST['password'] ?? '';
+    $confirm  = $_POST['confirm-password'] ?? '';
+
+    // 2. Validate (server-side)
+    if ($name === '') {
+        $errors[] = 'Full name is required.';
+    } elseif (strlen($name) > 100) {
+        $errors[] = 'Name must be 100 characters or less.';
+    }
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 150) {
+        $errors[] = 'Please enter a valid email address.';
+    }
+
+    if (strlen($password) < 8) {
+        $errors[] = 'Password must be at least 8 characters.';
+    }
+
+    if ($password !== $confirm) {
+        $errors[] = 'Passwords do not match.';
+    }
+
+    // 3. Make sure the email is not already registered
+    if (empty($errors)) {
+        $stmt = mysqli_prepare($db, 'SELECT id FROM users WHERE email = ?');
+        mysqli_stmt_bind_param($stmt, 's', $email);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_store_result($stmt);
+        if (mysqli_stmt_num_rows($stmt) > 0) {
+            $errors[] = 'That email is already registered. Please login instead.';
+        }
+        mysqli_stmt_close($stmt);
+    }
+
+    // 4. Save the new user (password is hashed, never stored as plain text)
+    if (empty($errors)) {
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+
+        try {
+            $stmt = mysqli_prepare($db, 'INSERT INTO users (name, email, password) VALUES (?, ?, ?)');
+            mysqli_stmt_bind_param($stmt, 'sss', $name, $email, $hash);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_close($stmt);
+
+            header('Location: Login.php?registered=1');
+            exit();
+        } catch (mysqli_sql_exception $ex) {
+            if ($ex->getCode() == 1062) {          // 1062 = duplicate email
+                $errors[] = 'That email is already registered. Please login instead.';
+            } else {
+                $errors[] = 'Something went wrong. Please try again.';
+            }
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +96,7 @@
             <a href="Home.html">Home</a>
             <a href="Products.html">Products</a>
             <a href="About Us.html">About</a>
-            <a href="LogIn.html">Login</a>
+            <a href="Login.php">Login</a>
         </nav>
     </header>
 
@@ -31,15 +106,23 @@
             <h1>Create an Account</h1>
             <p class="auth-description">Join Dear Candle PH and find your favorite scents.</p>
 
-            <form>
+            <?php if (!empty($errors)): ?>
+            <div class="auth-message error">
+                <?php foreach ($errors as $err): ?>
+                    <p><?php echo e($err); ?></p>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+
+            <form action="Register.php" method="post">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <input type="text" id="name" name="name" placeholder="Enter your name" value="<?php echo e($name); ?>" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" value="<?php echo e($email); ?>" required>
 
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Create a password" required>
+                <input type="password" id="password" name="password" placeholder="Create a password (min. 8 characters)" minlength="8" required>
 
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
@@ -47,7 +130,7 @@
                 <button type="submit">Create Account</button>
             </form>
 
-            <p class="auth-switch">Already have an account? <a href="LogIn.html">Login here</a></p>
+            <p class="auth-switch">Already have an account? <a href="Login.php">Login here</a></p>
         </div>
     </main>
 
@@ -87,7 +170,7 @@
                     About
                 </a>
 
-                <a href="LogIn.html">
+                <a href="Login.php">
                     Login
                 </a>
 

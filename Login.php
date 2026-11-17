@@ -1,3 +1,55 @@
+<?php
+// Login.php - checks email + password and starts a session
+session_start();
+require_once 'config.php';
+
+// Already logged in? Go straight to the welcome page.
+if (isset($_SESSION['user_id'])) {
+    header('Location: Welcome.php');
+    exit();
+}
+
+$error   = '';
+$email   = '';
+$success = '';
+
+if (isset($_GET['registered'])) {
+    $success = 'Account created! You can now login.';
+} elseif (isset($_GET['loggedout'])) {
+    $success = 'You have been logged out.';
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email    = strtolower(trim($_POST['email'] ?? ''));
+    $password = $_POST['password'] ?? '';
+
+    if ($email === '' || $password === '') {
+        $error = 'Please enter your email and password.';
+    } else {
+        // Look up the user with a prepared statement (safe from SQL injection)
+        $stmt = mysqli_prepare($db, 'SELECT id, name, password FROM users WHERE email = ?');
+        mysqli_stmt_bind_param($stmt, 's', $email);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_bind_result($stmt, $user_id, $user_name, $user_hash);
+        $found = mysqli_stmt_fetch($stmt);
+        mysqli_stmt_close($stmt);
+
+        // Compare the typed password with the stored hash
+        if ($found && password_verify($password, $user_hash)) {
+            session_regenerate_id(true);           // new session ID after login (security)
+            $_SESSION['user_id']    = $user_id;
+            $_SESSION['user_name']  = $user_name;
+            $_SESSION['user_email'] = $email;
+
+            header('Location: Welcome.php');
+            exit();
+        } else {
+            // Same message for wrong email or wrong password, so nobody can guess which emails exist
+            $error = 'Invalid email or password.';
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +73,7 @@
             <a href="Home.html">Home</a>
             <a href="Products.html">Products</a>
             <a href="About Us.html">About</a>
-            <a href="Register.html">Register</a>
+            <a href="Register.php">Register</a>
         </nav>
     </header>
 
@@ -31,9 +83,16 @@
             <h1>Login</h1>
             <p class="auth-description">Welcome back to Dear Candle PH.</p>
 
-            <form>
+            <?php if ($success !== ''): ?>
+            <div class="auth-message success"><p><?php echo e($success); ?></p></div>
+            <?php endif; ?>
+            <?php if ($error !== ''): ?>
+            <div class="auth-message error"><p><?php echo e($error); ?></p></div>
+            <?php endif; ?>
+
+            <form action="Login.php" method="post">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" value="<?php echo e($email); ?>" required>
 
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
@@ -41,7 +100,7 @@
                 <button type="submit">Login</button>
             </form>
 
-            <p class="auth-switch">Don't have an account? <a href="Register.html">Register here</a></p>
+            <p class="auth-switch">Don't have an account? <a href="Register.php">Register here</a></p>
         </div>
     </main>
 
@@ -81,7 +140,7 @@
                     About
                 </a>
 
-                <a href="Register.html">
+                <a href="Register.php">
                     Register
                 </a>
 
